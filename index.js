@@ -11,13 +11,13 @@ app.use(express.urlencoded({
 })
 )
 const authRouter = require("./routes/authRouter");
-const userRouter = require("./routes/userRouter");
+const user = require('./API/User')
 const event = require('./API/event')
 
 mongoose.connect(process.env.MONGO_DB)
 
 app.use('/auth', authRouter)
-app.use('/user', userRouter)
+app.use('/user', user)
 app.use('/event', event)
 
 app.get('/', (req, res) => {
