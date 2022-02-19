@@ -37,9 +37,6 @@ const User = new Schema({
     regDate: {
         type: Date, 
     },
-    // timestamp: {
-    //     timestamps: true,
-    // },  
 })
 
 module.exports = mongoose.model('User', User)
