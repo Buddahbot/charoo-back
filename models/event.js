@@ -9,38 +9,33 @@ const Event = new Schema({
     },
     sportstype: {
         type: String,
-        required: true
+       
     },
     distance: {
         type: Number,
-        required: true,
+      
     },
-    // start: {
-    //     type: Date,
-    //     required: true,
-    // },
     country: {
         type: String,
-        required: true,
+    
     },
     monetaryGoal: {
         type: Number,
-        required: true,
+       
     },
     eventTitle: {
         type: String,
-        required: true,
+     
     },
     description: {
         type: String,
     },
-    media: {
-        data: Buffer,
-        contentType: String
+    imageUrl: {
+        type: String,
     },
     charity: {
         type: String,
-        required: true,
+     
     },
     dateCreated: {
         type: Date,
@@ -50,7 +45,6 @@ const Event = new Schema({
         type: Boolean,
         default: true
     }
-    
 })
 
 module.exports = mongoose.model('Event', Event)

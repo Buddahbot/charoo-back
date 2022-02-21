@@ -52,7 +52,7 @@ const updateEvent = async (req, res) => {
                 monetaryGoal,
                 eventTitle,
                 description,
-                media,
+                imageUrl,
                 charity,
                 dateCreated } = req.body
         
@@ -66,7 +66,7 @@ const updateEvent = async (req, res) => {
                 monetaryGoal,
                 eventTitle,
                 description,
-                media,
+                imageUrl,
                 charity,
                 dateCreated,
             },
