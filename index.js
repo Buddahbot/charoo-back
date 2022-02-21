@@ -10,6 +10,9 @@ app.use(express.urlencoded({
     extended : false
 })
 )
+
+
+
 const authRouter = require("./routes/authRouter");
 const user = require('./API/User')
 const event = require('./API/event')
@@ -19,6 +22,8 @@ mongoose.connect(process.env.MONGO_DB)
 app.use('/auth', authRouter)
 app.use('/user', user)
 app.use('/event', event)
+
+
 
 app.get('/', (req, res) => {
     res.send('Welcome to Charoo!')
