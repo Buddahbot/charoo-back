@@ -27,7 +27,7 @@ const getOneDonation = async (req, res) => {
 
 const createDonation = async (req, res) => {
         try {
-            const event = await Donation.create(req.body)
+            const donation = await Donation.create(req.body)
             res.json({
             msg: "Successfully donated",
             success: true,
