@@ -16,12 +16,12 @@ const DonationSchema = new mongoose.Schema({
             type: Date,
             default: Date.now
         },
-        payMethod: [{
-            type: String,
-            paymentId: {
-                type: String
-            }, // Paypal oder Metamask Wallet address
-        }],
+        // payMethod: [{
+        //     type: String,
+        //     paymentId: {
+        //         type: String
+        //     }, // Paypal oder Metamask Wallet address
+        // }],
         donatedBy: {
             type: mongoose.Schema.Types.ObjectId,
             ref: 'User'
