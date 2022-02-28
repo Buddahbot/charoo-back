@@ -1,4 +1,4 @@
-const express = require("express")
+ const express = require("express")
 
 const {
     createEvent,
@@ -18,4 +18,4 @@ api.delete('/:id', deleteEvent)
 
 
 
-module.exports = api 
+module.exports = api
