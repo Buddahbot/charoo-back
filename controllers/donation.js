@@ -3,7 +3,7 @@ const Donation = require('../models/donation');
 
 const getDonation = async (req, res) => {
     try {
-        const donation = await Donation.find().populate('event')
+        const donation = await Donation.find().populate('createdBy')
         res.json({
             data: donation,
             msg: "Show all donations by user"
@@ -16,7 +16,7 @@ const getDonation = async (req, res) => {
 const getOneDonation = async (req, res) => {
     try {
         const { id } = req.params
-        const donation = await Donation.findById(id).populate('event')
+        const donation = await Donation.findById(id).populate('donatedBy')
         res.json({
             data: donation
         })
@@ -27,7 +27,7 @@ const getOneDonation = async (req, res) => {
 
 const createDonation = async (req, res) => {
         try {
-            const donation = await Donation.create(req.body).populate('event').populate('user')
+            const donation = await Donation.create(req.body)
             res.json({
             msg: "Successfully donated",
             success: true,
