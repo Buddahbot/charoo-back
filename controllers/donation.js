@@ -1,5 +1,5 @@
 const  { donation } = require('../models/donation');
-const Donation = require('..models/donation');
+const Donation = require('../models/donation');
 
 const getDonation = async (req, res) => {
     try {
