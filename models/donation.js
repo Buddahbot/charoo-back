@@ -8,7 +8,7 @@ const DonationSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Event'
     },
-    comments: [{
+    donations: [{
         amount: {
             type: Number,
         },
@@ -25,6 +25,10 @@ const DonationSchema = new mongoose.Schema({
         donatedBy: {
             type: mongoose.Schema.Types.ObjectId,
             ref: 'User'
+        },
+        comments: {
+            type: Boolean,
+            default: true,
         }
         
     }]

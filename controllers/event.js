@@ -3,7 +3,7 @@ const Event = require('../models/event')
 
 const getEvent = async (req, res) => {
     try {
-        const event = await Event.find().populate('user')
+        const event = await Event.find()
         res.json({
             data: event,
             msg: "show all Events",
@@ -16,7 +16,7 @@ const getEvent = async (req, res) => {
 const getOneEvent = async (req, res) => {      
     try {
         const { id } = req.params
-        const event = await Event.findById(id).populate('user')
+        const event = await Event.findById(id)
         res.json({
             data: event,
         })

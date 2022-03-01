@@ -2,7 +2,7 @@ const User = require("../models/user");
 
 const getUser = async (req, res, next) => {        
     try {
-        const user = await User.find()
+        const user = await User.find().populate('event')
         res.json({
             data: user,
             msg: "show all Users",
@@ -15,7 +15,7 @@ const getUser = async (req, res, next) => {
 const getOneUser = async (req, res, next) => {      
     try {
         const { id } = req.params
-        const user = await User.findById(id)
+        const user = await User.findById(id).populate('event')
         res.json({
             data: user,
         })

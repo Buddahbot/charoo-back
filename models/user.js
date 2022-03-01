@@ -36,7 +36,11 @@ const User = new Schema({
     },
     regDate: {
         type: Date, 
-    },
+    }, 
+    event: {
+        type: mongoose.Schema.Types.ObjectId, 
+        ref: 'Event'
+        },
 })
 
 module.exports = mongoose.model('User', User)

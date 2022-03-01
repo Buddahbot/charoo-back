@@ -16,7 +16,12 @@ const getDonation = async (req, res) => {
 const getOneDonation = async (req, res) => {
     try {
         const { id } = req.params
-        const donation = await Donation.findById(id).populate('donatedBy')
+        const donation = await Donation.findById(id).populate({
+            path: 'comments',
+            populate: [{
+            path: 'donatedBy'
+            }]
+        })
         res.json({
             data: donation
         })
@@ -41,6 +46,8 @@ const createDonation = async (req, res) => {
             });
         }
 };
+
+
 
 module.exports = {
     getDonation,
