@@ -3,10 +3,10 @@ const Schema = mongoose.Schema
 // import User from "./user";
 
 const Event = new Schema({
-    // user: {
-    //     type: mongoose.Schema.Types.ObjectId, 
-    //     ref: 'User'
-    // },
+     user: {
+        type: mongoose.Schema.Types.ObjectId, 
+        ref: 'User'
+    },
     sportstype: {
         type: String,
     
