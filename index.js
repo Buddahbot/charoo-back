@@ -23,7 +23,6 @@ mongoose.connect(process.env.MONGO_DB)
 app.use('/auth', authRouter)
 app.use('/user', user)
 app.use('/event', event)
-app.use('/event/:id', event)
 app.use('/donation', donation) //entry routes fuer donations API ordner
 
 
