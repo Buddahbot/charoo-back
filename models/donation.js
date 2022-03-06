@@ -6,7 +6,7 @@ const DonationSchema = new mongoose.Schema({
     },
     createdBy: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Event'
+        ref: 'User'
     },
     donations: [{
         amount: {
