@@ -3,7 +3,7 @@ const Schema = mongoose.Schema
 // import User from "./user";
 
 const Event = new Schema({
-    
+   
     sportstype: {
         type: String,
     
