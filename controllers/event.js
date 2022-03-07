@@ -3,7 +3,7 @@ const Event = require('../models/event')
 
 const getEvent = async (req, res) => {
     try {
-        const event = await Event.find().populate('user')
+        const event = await Event.find().populate('user').sort({dateCreated : +1 })
         res.json({
             data: event,
             msg: "show all Events",

@@ -3,10 +3,7 @@ const Schema = mongoose.Schema
 // import User from "./user";
 
 const Event = new Schema({
-    user: {
-        type: mongoose.Schema.Types.ObjectId, 
-        ref: 'User'
-    },
+   
     sportstype: {
         type: String,
     
@@ -44,7 +41,12 @@ const Event = new Schema({
     privat: {
         type: Boolean,
         default: true
-    }
+    },
+    user: {
+        type: mongoose.Schema.Types.ObjectId, 
+        ref: 'User',
+        required: true,
+    },
 })
 
 module.exports = mongoose.model('Event', Event)
