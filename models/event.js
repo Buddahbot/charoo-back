@@ -12,6 +12,9 @@ const Event = new Schema({
         type: Number,
     
     },
+   start: {
+        type: Date
+    },
     country: {
         type: String,
     
