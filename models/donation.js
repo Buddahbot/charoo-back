@@ -25,6 +25,10 @@ const DonationSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User'
     },
+    eventId: { // new entry 08.03.2022
+        type: string,
+        
+    },
     comments: { // privat donation yes  or no
         type: Boolean,
         default: true,
