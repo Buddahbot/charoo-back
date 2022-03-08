@@ -34,6 +34,9 @@ const Event = new Schema({
         type: String,
     
     },
+    start: {
+        type: Date
+    },
     dateCreated: {
         type: Date,
         default: Date.now
