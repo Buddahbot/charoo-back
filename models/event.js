@@ -3,7 +3,7 @@ const Schema = mongoose.Schema
 // import User from "./user";
 
 const Event = new Schema({
-    
+   
     sportstype: {
         type: String,
     
@@ -11,6 +11,9 @@ const Event = new Schema({
     distance: {
         type: Number,
     
+    },
+   start: {
+        type: Date
     },
     country: {
         type: String,
